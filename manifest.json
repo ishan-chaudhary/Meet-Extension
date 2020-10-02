@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Google Meet Attendence",
+    "description": "Adds a toggle to take attendence in Google Meets",
+    "version": "1.0.0",
+    "icons": {
+      "16": "logo.png",
+      "32": "logo.png"
+    },
+    "permissions": ["declarativeContent", "storage"],
+    "browser_action": {
+      "default_icon": {
+        "16": "logo.png",
+        "32": "logo.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Google Meet Attendence"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://meet.google.com/*"],
+        "js": ["csv_generator.js","content.js"]
+      }
+    ],
+    "web_accessible_resources": ["attendence_marker.js","logo.png"]
+  }

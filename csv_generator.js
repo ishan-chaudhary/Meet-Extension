@@ -10,8 +10,8 @@ function csvGenerator(data) {
     var url = window.URL.createObjectURL(data);
 
     var date = new Date()
-    document.getElementById('download-link').download = `Attendance-${date.getDay()}-${date.getMonth()}-${date.getFullYear()}.csv`
-    document.getElementById('download-link').href = url;
+    // document.getElementById('download-link').download = `Attendance-${date.getDay()}-${date.getMonth()}-${date.getFullYear()}.csv`
+    // document.getElementById('download-link').href = url;
 }
 
 var data = [{
